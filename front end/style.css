@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    background: #fff3b0;
+    color: #222;
+}
+
+header {
+    background: #ff4b4b;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 6px solid #222;
+}
+
+header h1 {
+    color: white;
+    font-size: 42px;
+    text-shadow: 4px 4px #222;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.decorations {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background: #4dc9ff;
+    border-bottom: 5px solid #222;
+    font-size: 35px;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 25px;
+}
+
+
+.card {
+    background: white;
+
+    border: 4px solid #222;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 7px 7px 0 #222;
+
+    transition: all 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+
+    box-shadow: 10px 12px 0 #222;
+}
+
+
+.photo {
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    border-bottom: 4px solid #222;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Different colors for each student */
+
+.card:nth-child(1) .photo {
+    background: #ffcccb;
+}
+
+.card:nth-child(2) .photo {
+    background: #ffd86b;
+}
+
+.card:nth-child(3) .photo {
+    background: #9ee7ff;
+}
+
+.card:nth-child(4) .photo {
+    background: #ffb6d9;
+}
+
+.card:nth-child(5) .photo {
+    background: #b9f6ca;
+}
+
+.card:nth-child(6) .photo {
+    background: #d7b8ff;
+}
+
+.card:nth-child(7) .photo {
+    background: #c7f0ff;
+}
+
+.card:nth-child(8) .photo {
+    background: #ffcf91;
+}
+
+
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 22px;
+    color: #e63946;
+    margin-bottom: 8px;
+}
+
+.info h3 {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.info p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #ffdf00;
+    border: 2px solid #222;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button {
+    display: block;
+    width: fit-content;
+    margin: 16px auto 0;
+    padding: 9px 16px;
+    border: 2px solid #222;
+    border-radius: 20px;
+    background: #ff4b4b;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: #222;
+    color: #ffdf00;
+}
+
+footer {
+    margin-top: 50px;
+    background: #ff4b4b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+}
+
+footer span {
+    color: #ffdf00;
+}
+
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+    .decorations {
+        font-size: 25px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+    }
+    .photo {
+        height: 190px;
+    }
+}
